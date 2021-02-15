@@ -2,7 +2,8 @@ package com.company;
 
 public class Lab1 {
     public static void main(String[] args) {
-        args = new String[]{"1","2","3","4","5","6","7","8","9"};
+        //args = new String[]{"1","1","11","2","65","26","17","82","59"};
+        //java -cp out/production/lab2 com.company.Lab2 1 2 3 4 5 6 7 8 9
         Point3d t1 = new Point3d();
         Point3d t2 = new Point3d();
         Point3d t3 = new Point3d();
@@ -16,7 +17,6 @@ public class Lab1 {
             t3.setX(Double.parseDouble(args[6]));
             t3.setY(Double.parseDouble(args[7]));
             t3.setZ(Double.parseDouble(args[8]));
-            System.out.println(t1.getX());
             System.out.println(computeArea(t1, t2, t3));
         }
     }
