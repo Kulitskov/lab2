@@ -15,7 +15,16 @@ public class Lab1 {
             t3.setX(Double.parseDouble(args[6]));
             t3.setY(Double.parseDouble(args[7]));
             t3.setZ(Double.parseDouble(args[8]));
-            System.out.println(t1.computeArea(t2, t3));
+            System.out.println(computeArea(t1, t2, t3));
         }
+    }
+
+    public static double computeArea(Point3d a, Point3d b, Point3d c){ //площадь треугольника
+        if (a.eq(b) || a.eq(c) || b.eq(c)) {
+            System.out.println("Koordinati sovpadaut");
+            System.exit(1);
+        }
+        double p = (a.distanceTo(b) + b.distanceTo(c) + a.distanceTo(c)) / 2;
+        return Math.sqrt(p * (p - a.distanceTo(b)) * (p - b.distanceTo(c)) * (p - a.distanceTo(c)));
     }
 }

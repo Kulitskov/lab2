@@ -39,7 +39,7 @@ public class Point3d {
         double rast = Math.sqrt(Math.pow(a.getX() - this.getX(), 2) + Math.pow(a.getY() - this.getY(), 2) + Math.pow(a.getZ() - this.getZ(), 2));
         return Math.round(rast * 100.0) / 100.0;
     }
-    public double computeArea(Point3d a, Point3d b){ //площадь треугольника
+    /*public double computeArea(Point3d a, Point3d b){ //площадь треугольника
         if (this.eq(a) || this.eq(b) || a.eq(b)) {
             System.out.println("Koordinati sovpadaut");
             System.exit(1);
@@ -47,4 +47,5 @@ public class Point3d {
         double p = (this.distanceTo(a) + this.distanceTo(b) + a.distanceTo(b)) / 2;
         return Math.sqrt(p * (p - this.distanceTo(a)) * (p - this.distanceTo(b)) * (p - a.distanceTo(b)));
     }
+     */
 }
